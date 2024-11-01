@@ -1,0 +1,45 @@
+[
+  {
+    "bg_type": "img",
+    "text": "Master your thoughts, find focus and boost your daily productivity.",
+    "heading": "",
+    "img_src": "girl2.png",
+    "count": "1."
+  },
+  {
+    "bg_type": "black",
+    "text": "Say goodbye to fatigue. We give you the energy you need to conquer the day.",
+    "heading": "",
+    "img_src": "",
+    "count": "2."
+  },
+  {
+    "bg_type": "img",
+    "text": "Inspire your creative mind. Unleash new ideas and innovative solutions.",
+    "heading": "",
+    "img_src": "girl.png",
+    "count": "3."
+  },
+  {
+    "bg_type": "black",
+    "text": "Focus like never before. We boost your ability to concentrate.",
+    "heading": "",
+    "img_src": "",
+    "count": "4."
+  },
+  {
+    "bg_type": "img",
+    "text": "Focus like never before. We boost your ability to concentrate.",
+    "heading": "",
+    "img_src": "girl3.png",
+    "count": "5."
+  },
+
+  {
+    "bg_type": "black",
+    "text": "Explore new mental horizons. We are your passport to the higher mind.",
+    "heading": "",
+    "img_src": "",
+    "count": "6."
+  }
+]

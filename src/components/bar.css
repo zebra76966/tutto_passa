@@ -11,7 +11,7 @@
   justify-content: space-between;
   padding: 2px 15px;
   opacity: 0;
-  animation: 0.5s fadein 11s ease-in forwards;
+  animation: 0.5s fadein 4s ease-in forwards;
 }
 
 @keyframes fadein {

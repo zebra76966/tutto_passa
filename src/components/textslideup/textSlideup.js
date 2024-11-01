@@ -4,7 +4,7 @@ import "./textSlideup.css";
 const TextSlideUp = () => {
   return (
     <>
-      <div class="text-slider d-flex align-items-center">
+      <div class="text-slider ">
         <p className="text-light h-font mb-0 pb-0">Discover</p>
         <div class="loader">
           <div class="words h-font">

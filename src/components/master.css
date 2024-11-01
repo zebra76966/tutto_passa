@@ -164,7 +164,7 @@ body {
   justify-content: center;
   z-index: 9999;
   background-color: white;
-  animation: 1s hideout 10s ease-out forwards;
+  animation: 1s hideout 2s ease-out forwards;
   cursor: none;
 }
 @keyframes hideout {
@@ -185,26 +185,17 @@ body {
   }
 }
 
-.spinner-load .flower-pattern {
-  animation: 5s spinner ease-out forwards;
+.flower-pattern {
+  animation: 20s spinner linear infinite;
 }
 
 @keyframes spinner {
   0% {
-    scale: 0;
     transform: rotate(0deg);
-    opacity: 1;
   }
 
-  90% {
-    scale: 40;
-    transform: rotate(360deg);
-    opacity: 1;
-  }
   100% {
-    scale: 50;
     transform: rotate(360deg);
-    opacity: 0;
   }
 }
 
@@ -215,7 +206,7 @@ body {
   z-index: 1;
   transform: translate(-50%, -50%);
   opacity: 0;
-  animation: 5s logo-blink 5s ease-out forwards;
+  animation: 2s logo-blink ease-out forwards;
 }
 
 @keyframes logo-blink {
@@ -241,6 +232,18 @@ body::-webkit-scrollbar-track {
 }
 
 body::-webkit-scrollbar-thumb {
+  background-color: #dcc5ff;
+  border-radius: 10px;
+}
+
+.thinScroll::-webkit-scrollbar {
+  width: 5px;
+}
+.thinScroll::-webkit-scrollbar-track {
+  background-color: rgba(0, 0, 0);
+}
+
+.thinScroll::-webkit-scrollbar-thumb {
   background-color: #dcc5ff;
   border-radius: 10px;
 }
@@ -349,6 +352,7 @@ body::-webkit-scrollbar-thumb {
   mask: linear-gradient(90deg, transparent, #e1d8d2 0.1%, #e1d8d2 80%, transparent);
   display: flex;
   flex-wrap: wrap;
+  padding: 50px 50px;
 }
 
 /* Feature Card */
@@ -360,15 +364,17 @@ body::-webkit-scrollbar-thumb {
   padding: 20px;
   width: 600px;
   position: relative;
-  height: 400px;
+  height: 600px;
 
   background-size: 160%;
-  outline: 5px solid #351518;
+  /* outline: 5px solid #351518; */
   transition: all 0.5s ease-in-out;
 }
 .featurecard p {
   overflow-y: auto;
-  max-height: 300px;
+  font-family: "PT Serif";
+  height: 300px;
+  line-height: 39.75px;
 }
 
 .featurecard .bottom-star {
@@ -396,7 +402,8 @@ body::-webkit-scrollbar-thumb {
 
 .featurecard:hover {
   background-size: 180%;
-  outline: 5px dashed #351518;
+  /* outline: 5px dashed #351518; */
+  scale: 1.02;
 }
 
 .features-section-inner {
@@ -420,5 +427,49 @@ body::-webkit-scrollbar-thumb {
 @keyframes hscroll {
   to {
     transform: translate(calc(-50% - 1rem));
+  }
+}
+
+.clipVid2 {
+  height: 100%;
+  width: 100%;
+  background: white;
+  mix-blend-mode: hard-light;
+}
+
+.features-section2 {
+  width: 100%;
+  height: 448%; /* Adjust height as needed */
+  padding: 10px;
+
+  overflow: hidden;
+  -webkit-mask: linear-gradient(transparent, #e1d8d2 0.1%, #e1d8d2 80%, transparent);
+  mask: linear-gradient(transparent, #e1d8d2 0.1%, #e1d8d2 80%, transparent);
+  display: flex;
+  flex-direction: column; /* Stacks items vertically */
+  padding: 50px 50px;
+}
+
+.features-section2-inner {
+  height: max-content;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  animation: vscroll2 20s linear infinite;
+  animation-play-state: paused;
+}
+
+.features-section2.animated > .features-section2-inner {
+  height: max-content;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  animation: vscroll2 20s linear infinite;
+  animation-play-state: running;
+}
+
+@keyframes vscroll2 {
+  to {
+    transform: translateY(calc(-50% - 1rem)); /* Move items up */
   }
 }
