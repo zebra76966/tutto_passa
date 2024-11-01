@@ -1,0 +1,106 @@
+.custom-car {
+  position: relative;
+  width: 100%; /* Adjust the size as needed */
+  height: 100dvh; /* Adjust the size as needed */
+  overflow: hidden; /* Hide overflow to maintain circular shape */
+  /* background-color: white; */
+}
+
+.slide {
+  position: absolute;
+  height: 400px; /* Adjust image size */
+  transition: all 0.5s ease-in-out;
+  filter: grayscale(100%);
+  box-shadow: 30px 10px 30px rgba(68, 68, 68, 0.2);
+  border-radius: 42px;
+}
+
+/* Positioning the images in a circular layout */
+.slide:nth-child(1) {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(0deg) translateY(-400px); /* Adjust Y distance */
+}
+
+.slide:nth-child(2) {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(72deg) translateY(-400px);
+}
+
+.slide:nth-child(3) {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(144deg) translateY(-400px);
+}
+
+.slide:nth-child(4) {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(216deg) translateY(-400px);
+}
+
+.slide:nth-child(5) {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(288deg) translateY(-400px);
+}
+
+.rotate-block {
+  transition: all 0.5s ease-in-out;
+}
+
+.rotate-block.active0 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(0deg);
+}
+
+.rotate-block.active1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-72deg);
+}
+
+.rotate-block.active2 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-144deg);
+}
+
+.rotate-block.active3 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-216deg);
+}
+
+.rotate-block.active4 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-288deg);
+}
+
+.slide.active {
+  height: 490px;
+  filter: grayscale(0%);
+}
+
+.clipped {
+  position: absolute;
+  bottom: 5%;
+  display: flex;
+  left: 50%;
+  transform: translateX(-50%);
+  align-items: end;
+  border: 1px solid black;
+  z-index: 2;
+}
+
+.cham-font {
+  transition: all 0.5s ease-in-out;
+}
