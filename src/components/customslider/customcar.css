@@ -97,10 +97,52 @@
   left: 50%;
   transform: translateX(-50%);
   align-items: end;
-  border: 1px solid black;
+  /* border: 1px solid black; */
   z-index: 2;
 }
 
 .cham-font {
   transition: all 0.5s ease-in-out;
+  font-size: 10em;
+}
+
+@media only screen and (max-width: 600px) {
+  .slide {
+    height: 210px; /* Adjust image size */
+
+    border-radius: 22px;
+  }
+  .slide.active {
+    height: 250px;
+    filter: grayscale(0%);
+  }
+
+  .cham-font {
+    font-size: 3em;
+  }
+  .custom-car {
+    position: relative;
+    margin-top: 50px;
+    width: 100%; /* Adjust the size as needed */
+    height: 55dvh; /* Adjust the size as needed */
+    overflow: hidden; /* Hide overflow to maintain circular shape */
+  }
+  .clipped {
+    position: absolute;
+    bottom: -25%;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .custom-car {
+    position: relative;
+    margin-top: 50px;
+    width: 100%; /* Adjust the size as needed */
+    height: 70dvh; /* Adjust the size as needed */
+    overflow: hidden; /* Hide overflow to maintain circular shape */
+  }
+  .clipped {
+    position: absolute;
+    bottom: -35%;
+  }
 }

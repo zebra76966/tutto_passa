@@ -9,6 +9,7 @@ import datas from "./slides.json";
 import FeedCard from "./feedcards";
 import Flipers from "./flippers";
 import Footer from "./footer";
+import ContactForm from "./forms/contact";
 
 const Home = () => {
   const fadeUpVariants = {
@@ -67,13 +68,19 @@ const Home = () => {
         style={{
           transform: `translateY(-${scrollPos}px)`,
           position: "relative",
-          transition: "transform 0.9s ease-out",
+          transition: "transform 0.8s ease-out",
         }}
+        id="home"
       >
         <div className="w-100 hero d-lg-flex align-items-center text-dark ">
           <div className="container-fluid ">
-            <div className="row">
-              <motion.div className="col-lg-6 d-flex align-items-center" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 2 }}>
+            <div className="row ">
+              <motion.div
+                className="col-lg-6 d-flex align-items-center order-2 order-lg-1 pt-lg-auto pt-5"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 2 }}
+              >
                 {activeDrink == "sky" && (
                   <motion.div className="w-100 ps-lg-5" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 2, delay: 0.5 }}>
                     <h1 className="display-1 h-font" style={{ color: activeDrink == "sky" ? "#48FFDC" : activeDrink == "land" ? "#22FFAA" : "" }}>
@@ -120,7 +127,7 @@ const Home = () => {
                 )}
               </motion.div>
 
-              <div className="col-lg-6 position-relative pe-0">
+              <div className="col-lg-6 position-relative pe-lg-0 mt-lg-0 mt-4 order-1 order-lg-2">
                 <div style={{ overflow: "hidden" }}>
                   <div
                     className="clip-box d-flex align-items-center justify-content-center"
@@ -199,10 +206,11 @@ const Home = () => {
             </div>
           </div>
         </div>
+        <div className="p-0 m-0 h-0" id="explore"></div>
 
-        <div id="explore" className="w-100 hero d-lg-flex align-items-center text-dark bg-light">
+        <div className="w-100 hero2 d-lg-flex align-items-center text-dark bg-light ">
           <div className="container-fluid ">
-            <div className="row">
+            <div className="row pt-lg-0 pt-5">
               <motion.div
                 className="col-lg-4 d-flex align-items-center justify-content-center"
                 initial={{ opacity: 0, y: 20 }}
@@ -221,7 +229,7 @@ const Home = () => {
                 whileInView={{ opacity: 1, y: 0, rotate: 0 }}
                 transition={{ duration: 3, delay: 0.2, type: spring }}
               >
-                <img src="1.png" className="drink-img" height={500} />
+                <img src="1.png" className="drink-img" />
 
                 <img src="./patterns/signs/run.svg" className="bg-pattern" />
               </motion.div>
@@ -241,7 +249,7 @@ const Home = () => {
           </div>
         </div>
 
-        <div className="w-100 hero d-lg-flex align-items-center text-dark ">
+        <div className="w-100 hero2 d-lg-flex align-items-center text-dark ">
           <div className="container-fluid ">
             <div className="row">
               <motion.div
@@ -262,7 +270,7 @@ const Home = () => {
                 whileInView={{ opacity: 1, y: 0, rotate: 0 }}
                 transition={{ duration: 3, delay: 0.2, type: spring }}
               >
-                <img src="2.png" className="drink-img" height={500} />
+                <img src="2.png" className="drink-img" />
 
                 <img src="./patterns/signs/float.svg" className="bg-pattern" />
               </motion.div>
@@ -282,7 +290,7 @@ const Home = () => {
           </div>
         </div>
 
-        <div className="w-100 hero d-lg-flex align-items-center text-dark bg-light">
+        <div className="w-100 hero2 d-lg-flex align-items-center text-dark bg-light ">
           <div className="container-fluid ">
             <div className="row">
               <motion.div
@@ -303,7 +311,7 @@ const Home = () => {
                 whileInView={{ opacity: 1, y: 0, rotate: 0 }}
                 transition={{ duration: 3, delay: 0.2, type: spring }}
               >
-                <img src="3.png" className="drink-img" height={500} />
+                <img src="3.png" className="drink-img" />
 
                 <img src="./patterns/signs/fall.svg" className="bg-pattern" />
               </motion.div>
@@ -335,7 +343,7 @@ const Home = () => {
 
         {/* Custom Car End */}
 
-        <div className="container-fluid px-lg-5  bg-black pb-4">
+        <div className="container-fluid px-lg-5  bg-black pb-4" id="about">
           <div className="row">
             <motion.div className="col-12 px-lg-5 bg-black py-4" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.1 }}>
               {/* itemVid Start===> */}
@@ -369,14 +377,14 @@ const Home = () => {
               {/* itemVid End===> */}
             </motion.div>
 
-            <motion.div className="col-lg-6 ps-lg-5 mb-3" style={{ maxHeight: "693px" }} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.5 }}>
+            <motion.div className="col-lg-6 ps-lg-5 mb-3 flippersWrapper" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.5 }}>
               <div className="w-100 h-100">
                 <video muted loop poster="logo512.png" className=" shadow-lg " style={{ width: "100%", objectFit: "cover", borderRadius: "40px" }} autoPlay="true">
                   <source src="wavesTrim.mp4" type="video/mp4" />
                 </video>
 
                 <motion.div
-                  className="h-100 w-100 d-flex align-items-center justify-content-center border-dark mt-2"
+                  className="h-lg-100 w-100 d-flex align-items-center justify-content-center border-dark mt-2"
                   style={{ borderRadius: "40px", borderStyle: "dashed", borderWidth: "6px" }}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
@@ -400,8 +408,7 @@ const Home = () => {
             </motion.div>
 
             <motion.div
-              className="col-lg-6 pe-lg-5 mb-3 position-relative"
-              style={{ maxHeight: "550px" }}
+              className="col-lg-6 pe-lg-5 mb-3 position-relative flippersWrapper2"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.5 }}
@@ -412,7 +419,7 @@ const Home = () => {
                 </video>
 
                 <motion.div
-                  className="h-100 w-100 d-flex align-items-center justify-content-center border-dark mt-2"
+                  className="h-lg-100 w-100  d-flex align-items-center justify-content-center border-dark mt-2"
                   style={{ borderRadius: "40px", borderStyle: "dashed", borderWidth: "6px" }}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
@@ -501,7 +508,7 @@ const Home = () => {
 
         {/* Alt Drinks start */}
 
-        <div className="container-fluid my-5">
+        <div className="container-fluid my-lg-5">
           <div className="row mx-0 px-0 position-relative">
             <div className="col-lg-6 ">
               <motion.div className="col-12   py-4" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.1 }}>
@@ -509,7 +516,7 @@ const Home = () => {
 
                 <div className=" align-items-center position-relative itemVid">
                   <div className="w-100 ">
-                    <video muted loop poster="logo-bw.png" className=" shadow-lg " style={{ width: "100%", height: "80dvh", objectFit: "cover", borderRadius: "40px" }} autoPlay="true">
+                    <video muted loop poster="logo-bw.png" className=" shadow-lg wavesTrim" style={{ width: "100%", height: "80dvh", objectFit: "cover", borderRadius: "40px" }} autoPlay="true">
                       <source src="wavesTrim.mp4" type="video/mp4" />
                     </video>
                   </div>
@@ -532,20 +539,34 @@ const Home = () => {
             </div>
 
             <div className="col-lg-6 ">
-              <div className="d-flex align-items-center position-relative " style={{ height: "80dvh", overflow: "clip" }}>
+              <div className="d-flex align-items-center position-relative alt-drink-wrapper" style={{ height: "80dvh", overflow: "clip" }}>
                 <div className="h-100 w-100 d-flex align-items-center justify-content-center" style={{ position: "absolute", top: "50%", left: "50%", transform: "translate(-50%,-50%)" }}>
-                  <motion.img src="./passa-w.png" height={"130%"} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.5 }} />
+                  <motion.img
+                    src="./passa-w.png"
+                    className="alt-drink-bg"
+                    height={"130%"}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, delay: 0.5 }}
+                  />
                 </div>
 
                 <div className="h-100 w-100 d-flex align-items-center justify-content-center" style={{ position: "absolute", zIndex: "2", top: "50%", left: "50%", transform: "translate(-50%,-50%)" }}>
-                  <motion.img src="./alt_drinks.png" height={"80%"} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 1.3 }} />
+                  <motion.img
+                    src="./alt_drinks.png"
+                    className="alt-drink-front"
+                    height={"80%"}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, delay: 1.3 }}
+                  />
                 </div>
               </div>
             </div>
           </div>
         </div>
 
-        <div className="container-fluid text-center mt-5 pt-5 pb-4">
+        <div className="container-fluid text-center mt-lg-5 pt-lg-5 pb-4">
           <div className="w-100 d-flex align-items-cennter justify-content-center mt-5 pt-5">
             <Flipers delay={0.5} img1={"./talisman.svg"} img2={"./patterns/signs/run.svg"} />
             <Flipers delay={1} img1={"./talisman.svg"} img2={"./patterns/signs/float.svg"} />
@@ -557,6 +578,24 @@ const Home = () => {
         </div>
       </div>
       <Footer />
+
+      <div class="modal fade " id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content bg-black text-light" style={{ borderRadius: "25px" }}>
+            <div class="modal-header">
+              <h5 class="modal-title" id="staticBackdropLabel">
+                Got a Query?
+              </h5>
+              <button type="button" class="btn bg-none text-danger fs-3" data-bs-dismiss="modal" aria-label="Close">
+                <i className="fa fa-times"></i>
+              </button>
+            </div>
+            <div class="modal-body">
+              <ContactForm />
+            </div>
+          </div>
+        </div>
+      </div>
     </>
   );
 };

@@ -72,3 +72,22 @@
     opacity: 0;
   }
 }
+
+/* responsive code start */
+
+@media only screen and (max-width: 768px) {
+  .bottom-nav {
+    height: 60px;
+    width: 380px;
+
+    padding: 2px 4px;
+  }
+  .bottom-nav img {
+    height: 30px;
+  }
+  .bottom-nav .link {
+    height: 54px;
+    width: 55px;
+    padding: 0.5rem;
+  }
+}

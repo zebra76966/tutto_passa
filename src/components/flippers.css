@@ -26,6 +26,9 @@
   font-weight: bold;
   border: 2px solid #272727;
 }
+.side img {
+  height: 50px !important;
+}
 
 .top {
   background: #000000;
@@ -38,4 +41,19 @@
   background: #272727;
   color: #fff;
   transform: translate3d(0, 0, 1em);
+}
+
+@media only screen and (max-width: 768px) {
+  .side {
+    position: absolute;
+    height: 40px;
+    width: 40px;
+  }
+  .cube {
+    width: 40px;
+    height: 0px;
+  }
+  .side img {
+    height: 20px !important;
+  }
 }

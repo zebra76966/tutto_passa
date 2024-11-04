@@ -7,9 +7,13 @@ body {
   scroll-behavior: smooth;
 }
 
-.hero {
+.hero,
+.hero2 {
   height: 100dvh;
   /* background-color: black; */
+}
+.hero2 {
+  overflow-x: clip;
 }
 
 .bg-black {
@@ -266,6 +270,7 @@ body::-webkit-scrollbar-thumb {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  height: 500px;
 }
 
 @keyframes moveslow {
@@ -471,5 +476,138 @@ body::-webkit-scrollbar-thumb {
 @keyframes vscroll2 {
   to {
     transform: translateY(calc(-50% - 1rem)); /* Move items up */
+  }
+}
+.flippersWrapper {
+  max-height: 693px;
+}
+
+.flippersWrapper2 {
+  max-height: 550px;
+}
+
+.flippersWrapper .h-lg-100,
+.flippersWrapper2 .h-lg-100 {
+  height: 100%;
+}
+
+/* responsive code start */
+
+@media only screen and (max-width: 768px) {
+  .clip-box {
+    width: 100%;
+    height: 50dvh;
+    position: relative;
+    background-color: #dcc5ff;
+    border-radius: 30px;
+  }
+  .patterns img {
+    width: auto;
+    height: 200px;
+  }
+  .motion-drinks::before {
+    content: "";
+    height: 300px;
+    width: 250px;
+    background-color: rgb(0, 0, 0);
+    border-radius: 30px;
+    position: absolute;
+    bottom: -150px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .motion-drinks img {
+    height: 350px;
+    width: auto;
+    position: absolute;
+    z-index: 5;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .hero {
+    padding-top: 110px;
+    height: 100%;
+  }
+
+  .hero p {
+    font-size: 0.8em !important;
+    margin-bottom: 0 !important;
+  }
+
+  .no-round-sm {
+    border-radius: 0 !important;
+  }
+
+  .hero2 {
+    height: 100%;
+    margin-top: 50px;
+  }
+  .hero2 p {
+    font-size: 0.8em !important;
+    margin-top: 10px;
+  }
+  .drink-img {
+    position: static;
+    transform: none;
+    height: 250px;
+  }
+  .bg-pattern {
+    height: 300px;
+  }
+
+  .clipVid img {
+    height: 200px !important;
+  }
+
+  .flippersWrapper,
+  .flippersWrapper2 {
+    max-height: 100%;
+  }
+
+  .flippersWrapper .h-lg-100,
+  .flippersWrapper2 .h-lg-100 {
+    height: auto !important;
+  }
+
+  .featurecard {
+    padding: 10px;
+    width: 300px;
+    height: 300px;
+    background-size: 160%;
+  }
+  .featurecard p {
+    height: 150px;
+    font-size: 1.5em !important;
+    line-height: 25px;
+  }
+  .featurecard .bottom-star img {
+    scale: 0.8;
+  }
+  .wavesTrim {
+    height: 55dvh !important;
+  }
+  .alt-drink-front {
+    height: 60% !important;
+  }
+  .alt-drink-bg {
+    height: 90% !important;
+  }
+  .alt-drink-wrapper {
+    height: 60dvh !important;
+  }
+}
+
+@media only screen and (max-width: 420px) {
+  .motion-drinks img {
+    height: 280px;
+  }
+  .motion-drinks::before {
+    content: "";
+    height: 220px;
+    bottom: -100px;
+    width: 200px;
   }
 }

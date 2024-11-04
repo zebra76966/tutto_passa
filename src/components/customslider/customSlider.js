@@ -32,7 +32,6 @@ const CustomCarousel = () => {
         style={{
           color: colors[active],
 
-          fontSize: "10em",
           position: "absolute",
           top: "10%",
           left: "50%",
