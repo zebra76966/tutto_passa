@@ -91,3 +91,20 @@
     padding: 0.5rem;
   }
 }
+
+@media only screen and (max-width: 512px) {
+  .bottom-nav {
+    height: 60px;
+    width: 320px;
+
+    padding: 2px 4px;
+  }
+  /* .bottom-nav img {
+    height: 30px;
+  }
+  .bottom-nav .link {
+    height: 54px;
+    width: 55px;
+    padding: 0.5rem;
+  } */
+}
