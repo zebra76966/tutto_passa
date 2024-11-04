@@ -50,4 +50,22 @@
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
   </body>
+
+  <script>
+    const setFavicon = (isDarkMode) => {
+      const favicon = document.getElementById("favicon");
+      favicon.href = isDarkMode ? "%PUBLIC_URL%/favicon.ico" : "%PUBLIC_URL%/favicon-dark.ico";
+    };
+
+    // Check the user's preferred color scheme
+    const darkModeMediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
+
+    // Set initial favicon based on the theme
+    setFavicon(darkModeMediaQuery.matches);
+
+    // Listen for changes in the color scheme
+    darkModeMediaQuery.addEventListener("change", (e) => {
+      setFavicon(e.matches);
+    });
+  </script>
 </html>
