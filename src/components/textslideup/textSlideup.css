@@ -84,7 +84,25 @@
   }
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 1280px) {
+  .text-slider {
+    font-size: 48px;
+  }
+  .loader {
+    font-size: 48px;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .text-slider {
+    font-size: 45px;
+  }
+  .loader {
+    font-size: 45px;
+  }
+}
+
+@media only screen and (max-width: 992px) {
   .text-slider {
     font-size: 35px;
   }
