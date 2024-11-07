@@ -350,7 +350,7 @@ const Home = () => {
 
               <div className=" align-items-center position-relative itemVid">
                 <div className="w-100 ">
-                  <video muted loop poster="logo512.png" className=" shadow-lg " style={{ width: "100%", objectFit: "cover", borderRadius: "40px" }} autoPlay="true">
+                  <video muted loop poster="heroVid.png" className=" shadow-lg " style={{ width: "100%", objectFit: "cover", borderRadius: "40px" }} autoPlay="true">
                     <source src="heroVid.mp4" type="video/mp4" />
                   </video>
                 </div>
@@ -379,7 +379,7 @@ const Home = () => {
 
             <motion.div className="col-lg-6 ps-lg-5 mb-3 flippersWrapper" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.5 }}>
               <div className="w-100 h-100">
-                <video muted loop poster="logo512.png" className=" shadow-lg " style={{ width: "100%", objectFit: "cover", borderRadius: "40px" }} autoPlay="true">
+                <video muted loop poster="wavesTrim.png" className=" shadow-lg " style={{ width: "100%", objectFit: "cover", borderRadius: "40px" }} autoPlay="true">
                   <source src="wavesTrim.mp4" type="video/mp4" />
                 </video>
 
@@ -414,7 +414,7 @@ const Home = () => {
               transition={{ duration: 0.5, delay: 0.5 }}
             >
               <div className="w-100 h-100">
-                <video muted loop poster="logo512.png" className=" shadow-lg " style={{ width: "100%", objectFit: "cover", borderRadius: "40px" }} autoPlay="true">
+                <video muted loop poster="mountainsTrim.png" className=" shadow-lg " style={{ width: "100%", objectFit: "cover", borderRadius: "40px" }} autoPlay="true">
                   <source src="mountainsTrim.mp4" type="video/mp4" />
                 </video>
 
@@ -516,7 +516,7 @@ const Home = () => {
 
                 <div className=" align-items-center position-relative itemVid">
                   <div className="w-100 ">
-                    <video muted loop poster="logo-bw.png" className=" shadow-lg wavesTrim" style={{ width: "100%", height: "80dvh", objectFit: "cover", borderRadius: "40px" }} autoPlay="true">
+                    <video muted loop poster="wavesTrim.png" className=" shadow-lg wavesTrim" style={{ width: "100%", height: "80dvh", objectFit: "cover", borderRadius: "40px" }} autoPlay="true">
                       <source src="wavesTrim.mp4" type="video/mp4" />
                     </video>
                   </div>
