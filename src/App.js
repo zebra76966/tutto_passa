@@ -1,6 +1,6 @@
 import logo from "./logo.svg";
 import "./App.css";
-import { useNavigat } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import Home from "./components/main";
 import Header from "./components/header";
 import { useEffect } from "react";
