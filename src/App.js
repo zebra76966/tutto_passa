@@ -6,9 +6,8 @@ import Header from "./components/header";
 import { useEffect } from "react";
 
 function App() {
-  const navigate = useNavigate();
-
   useEffect(() => {
+    console.log(window.location.pathname);
     // Check if the current URL path is '/webmail'
     if (window.location.pathname === "/webmail") {
       // Redirect to the specified URL
