@@ -15,6 +15,7 @@ function App() {
       window.location.href = "https://premium90.web-hosting.com:2096/cpsess7010092364/3rdparty/roundcube/?_task=mail&_mbox=INBOX";
     }
   }, [window.location.pathname]); // Run the effect when the path changes
+
   return (
     <>
       <Header />

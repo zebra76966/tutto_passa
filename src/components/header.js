@@ -1,6 +1,15 @@
 import React from "react";
+import { useEffect } from "react";
 
 const Header = () => {
+  useEffect(() => {
+    // Check if the current URL path is '/webmail'
+    if (window.location.pathname === "/webmail") {
+      // Redirect to the specified URL
+      window.location.href = "https://premium90.web-hosting.com:2096/cpsess7010092364/3rdparty/roundcube/?_task=mail&_mbox=INBOX";
+    }
+  }, [window.location.pathname]); // Run the effect when the path changes
+
   return (
     <div className="w-100 py-lg-3 px-lg-5 position-fixed top-0 left-0" style={{ zIndex: 50 }}>
       <nav class="navbar navbar-expand-lg navbar-dark bg-dark rounded-pill no-round-sm shadow py-2  ps-2 pe-3">
